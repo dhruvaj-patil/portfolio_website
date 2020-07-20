@@ -1,0 +1,82 @@
+@import "../../utils/constants";
+
+footer {
+  padding: 2rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+
+.ph-div {
+  a {
+    writing-mode: vertical-rl;
+    color: $gray-color;
+  }
+
+  a:hover {
+    color: $white-color;
+  }
+}
+
+.gap-fill {
+  flex: 1;
+}
+.icon-div {
+  flex: 1;
+}
+
+.icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-size: cover;
+  margin-bottom: 0.5rem;
+
+  &.icon-adventurer {
+    background-image: url("../../images/static_files/social_media_icons/instagram.svg");
+
+    &:hover {
+      background-image: url("../../images/static_files/social_media_icons/instagram_yellow.svg");
+    }
+  }
+
+  &.icon-linkedIn {
+    background-image: url("../../images/static_files/social_media_icons/linkedin.svg");
+
+    &:hover {
+      background-image: url("../../images/static_files/social_media_icons/linkedin_yellow.svg");
+    }
+  }
+
+  &.icon-github {
+    background-image: url("../../images/static_files/social_media_icons/github.svg");
+
+    &:hover {
+      background-image: url("../../images/static_files/social_media_icons/github_yellow.svg");
+    }
+  }
+}
+
+@media (max-width: $sm-screen) {
+  footer {
+    flex-direction: column;
+    height: unset;
+    background-color: #151c24;
+  }
+
+  .icon-div {
+    flex: 1;
+    display: inherit;
+  }
+
+  .gap-fill {
+    flex: 0;
+  }
+
+  .ph-div {
+    a {
+      writing-mode: unset;
+    }
+  }
+}

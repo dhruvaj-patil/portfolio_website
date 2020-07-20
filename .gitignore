@@ -51,7 +51,7 @@ typings/
 .npm
 
 # Optional eslint cache
-.eslintcache
+.eslintcachehttps://github.com/dhruvaj-patil/portfolio_website.git
 
 # Microbundle cache
 .rpt2_cache/
@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+public/
+package-lock.json
+yarn.lock
+settings.json

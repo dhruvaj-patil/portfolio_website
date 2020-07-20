@@ -1,0 +1,141 @@
+@import "../../utils/constants";
+
+.container {
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 100vh;
+}
+
+
+.main-div{
+    display: flex;
+    flex: 7;
+}
+
+.menu {
+  flex: 2;
+}
+
+.sm-menu-container,
+.sm-container-menu-btn {
+  display: none;
+}
+
+@keyframes dropIn {
+  from {
+    height: 1vh;
+  }
+  to {
+    height: 91vh;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: $sm-screen) {
+  .menu {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .main-div{
+    margin: 60px 0px 0px 0px;
+  
+  }
+
+
+  .sm-container-menu-btn {
+    position: fixed;
+    padding: 5px 30px;
+    height: 60px;
+    /* box-sizing: border-box; */
+    background-color: $blue-black-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 999;
+
+    h3 {
+      margin: 8px auto;
+    }
+
+    .hamburger .line {
+      width: 35px;
+      height: 2px;
+      background-color: $yellow-color;
+      display: block;
+      margin: 8px 0px;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger:hover {
+      cursor: pointer;
+    }
+
+    /* TWELVE */
+
+    .hamburger-animation.is-active .line:nth-child(1) {
+      opacity: 0;
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+
+    .hamburger-animation.is-active .line:nth-child(3) {
+      opacity: 0;
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      -o-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+  }
+
+  .sm-menu-container {
+    display: none;
+  }
+  .sm-menu-container.is-active {
+    position: fixed;
+    top: 59px;
+    width: 100%;
+    height: 91vh;
+    background-color: $blue-black-color;
+    z-index: 1;
+    text-align: center;
+    padding: 50px 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation-name: dropIn;
+    animation-duration: 1.5s;
+    // animation-direction: reverse;
+    animation-timing-function: cubic-bezier(0.6, -0.01, 0.5, 1.3);
+
+    // TODO: add Animation for each nth element + 100ms for h3 / Make it Smooth
+    h3,
+    h2,
+    h1 {
+      animation-name: fadeIn;
+      animation-duration: 1.75s;
+      // animation-direction: reverse;
+      animation-timing-function: ease-in;
+    }
+  }
+}

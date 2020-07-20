@@ -1,0 +1,35 @@
+@import "../../utils/constants";
+
+a {
+  margin: 0 10px;
+}
+
+.icon {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  background-size: cover;
+  margin-bottom: 0.5rem;
+
+  &.icon-arrow-right {
+    background-image: url("../../images/static_files/social_media_icons/arrow_right.svg");
+
+    &:hover {
+      background-image: url("../../images/static_files/social_media_icons/arrow_right_yellow.svg");
+    }
+  }
+
+  &.icon-arrow-left {
+    background-image: url("../../images/static_files/social_media_icons/arrow_right.svg");
+    transform: rotate(180deg);
+    &:hover {
+      background-image: url("../../images/static_files/social_media_icons/arrow_right_yellow.svg");
+    }
+  }
+}
+
+@media (max-width: $sm-screen) {
+  .icon {
+    display: none;
+  }
+}
