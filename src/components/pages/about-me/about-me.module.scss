@@ -26,38 +26,61 @@
     position: relative;
     overflow: hidden;
     display: inline-block;
-    width: 225px;
-    height: 225px;
+    width: 230px;
+    height: 230px;
     border-radius: 20px;
   }
 
   .content-div {
     max-width: 600px;
     width: 100%;
+    
+    p{
+      text-indent: 1.5rem;
+    }
   }
-.header-div{
+  .header-div {
     display: flex;
     align-self: center;
     flex-direction: row;
     justify-content: space-between;
 
-  h1{
+    h1 {
       padding-top: calc(135px - 60px);
-  }
-  .icon {
-    display: inline-block;
-    width: 180px;
-    height: 135px;
-    background-size: cover;
+    }
+    .icon {
+      display: inline-block;
+      width: 180px;
+      height: 135px;
+      background-size: cover;
 
-    &.icon-abtMe {
-      background-image: url("../../../images/static_files/about_me/adventure_new.svg");
+      &.icon-abtMe {
+        background-image: url("../../../images/static_files/about_me/adventure_new.svg");
+      }
     }
   }
 }
-}
+
+@media (max-width: $md-screen) {
+  .about-me-div {
+    .img-div {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 1rem;
+    }
+
+    .img-wrapper {
+      width: 190px;
+      height: 190px;
+    }
 
 
-@media(max-width: $md-screen) {
-
+    .header-div{
+      flex-direction: column-reverse;
+      align-items: center;
+      h1{
+        padding-top: 1rem;
+      }
+    }
+  }
 }

@@ -11,7 +11,7 @@ export default function AboutMePage() {
         relativePath: { eq: "static_files/about_me.jpg" }
       ) {
         childImageSharp {
-          fixed(width: 300, height: 300, cropFocus: EAST, quality: 90) {
+          fixed(width: 250, height: 250, cropFocus: EAST, quality: 90) {
             ...GatsbyImageSharpFixed_tracedSVG
           }
         }
@@ -28,8 +28,8 @@ export default function AboutMePage() {
           <div className={style.imgWrapper}>
             <Img
               fixed={data.placeholderImage.childImageSharp.fixed}
-              width={300}
-              height={300}
+              width={250}
+              height={250}
             ></Img>
           </div>
         </div>
@@ -43,7 +43,7 @@ export default function AboutMePage() {
         </div>
         <div>
           <p>
-            Welcome to my website, I am Dhruvaj Patil I am a professional
+            &#9; Welcome to my website, I am Dhruvaj Patil I am a professional
             Software/Web Developer who has the drive to learn new technologies.
             I develop effective solutions using strategic foresight, passion,
             and creativity. Because of my inquisitive nature, I keep venturing

@@ -1,12 +1,12 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/layout/layout"
+import Layout from "../components/layout/layout";
 
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
-import SEO from "../components/seo"
-import style from "../components/pages/index/index.layout.module.scss"
+import SEO from "../components/seo";
+import style from "../components/pages/index/index.layout.module.scss";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -21,7 +21,7 @@ const IndexPage = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Layout>
@@ -37,7 +37,7 @@ const IndexPage = () => {
         </div>
 
         {/* TODO: Change as it is conflicting with the background */}
-        <div className={style.smContentDiv}>
+        {/* <div className={style.smContentDiv}>
           <h1>
             <span style={{ color: "white" }}>S</span>
             <span style={{ color: "white" }}>O</span>
@@ -65,9 +65,29 @@ const IndexPage = () => {
           <h3>Vision</h3>
           <h3>Providing</h3>
           <h3>Value</h3>
-        </div>
+        </div> */}
         {/*  ^^^^^^^ Change till here ^^^^^^^ */}
 
+        <div className={` ${style.titleDiv} ${style.outlineContainer}`}>
+          <h1 className={style.titleOutline}>Software</h1>
+          <h1 className={style.titleOutline}>Developer</h1>
+
+{/* TODO: Add better Css to this block */}
+         {/* <h3>Understanding</h3>
+          <h3>Vision</h3>
+          <h3>Providing </h3>
+          <h3>Value</h3> */}
+        </div>
+        <div  className={` ${style.titleDiv} ${style.solidContainer}`}>
+          <h1 className={style.titleSolid}>Software</h1>
+          <h1 className={style.titleSolid}>Developer</h1>
+
+          {/* <h3>Understanding</h3>
+          <h3>Vision</h3>
+          <h3>Providing </h3>
+          <h3>Value</h3> */}
+
+        </div>
         <div className={style.imgDiv}>
           <Img
             objectFit="cover"
@@ -77,7 +97,7 @@ const IndexPage = () => {
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
