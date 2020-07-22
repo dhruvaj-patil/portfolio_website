@@ -43,13 +43,14 @@ export default function AboutMePage() {
         </div>
         <div>
           <p>
-            &#9; Welcome to my website, I am Dhruvaj Patil I am a professional
+            Welcome to my website, I am Dhruvaj Patil, a professional
             Software/Web Developer who has the drive to learn new technologies.
             I develop effective solutions using strategic foresight, passion,
             and creativity. Because of my inquisitive nature, I keep venturing
             out trying to do new things, and gain new perspectives around
             things. Apart from being a passionate Software Developer, I love to
-            spend my time traveling, cooking, learning about space and astrophysics, and playing sports.
+            spend my time traveling, cooking, learning about space and astrophysics, 
+            and playing sports.
           </p>
         </div>
         </div>

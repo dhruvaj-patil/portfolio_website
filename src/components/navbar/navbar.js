@@ -22,8 +22,8 @@ const Navbar = ({ siteTitle, navItems }) => (
         {navItems.map((item, index) => {
           return (
             <h2 key={index} style={{ letterSpacing: `1.5px` }}>
-              <Link className={style.menuItems} to="/" key={index}>
-                {item}
+              <Link className={style.menuItems} to={`/${item.link}`} key={index}>
+                {item.name}
               </Link>
             </h2>
           )

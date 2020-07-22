@@ -5,18 +5,36 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
 
-import Navbar from "../navbar/navbar"
-import "../layout.css"
-import style from "./layout.module.scss"
+import Navbar from "../navbar/navbar";
+import "../layout.css";
+import style from "./layout.module.scss";
 
-import Footer from "../footer/footer"
+import Footer from "../footer/footer";
 import Navbuttons from "../navbuttons/navbuttons";
+import { Link } from "gatsby";
 
-const MENU_ITEMS = ["about me", "resume", "blogs", "contact me"]
+const MENU_ITEMS = [
+  {
+    name: "about me",
+    link: "about-me",
+  },
+  {
+    name: "resume",
+    link: "resume",
+  },
+  {
+    name: "blogs",
+    link: "blogs",
+  },
+  {
+    name: "contact me",
+    link: "contact-me",
+  },
+];
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,15 +45,20 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
-  const [openMenu, setOpenMenu] = useState(false)
+  `);
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <div className={style.container}>
       <div className={`${style.smContainerMenuBtn} `}>
         <div>
-          <h3 className={`'animate__animated animate__bounceOutLeft`} style={{ color: "white" }}>
-            D J<span style={{ color: `#F5BA57` }}>.</span>
+          <h3
+            className={`'animate__animated animate__bounceOutLeft`}
+            style={{ color: "white" }}
+          >
+            <Link to="/">
+              D J<span style={{ color: `#F5BA57` }}>.</span>
+            </Link>
           </h3>
         </div>
 
@@ -53,7 +76,9 @@ const Layout = ({ children }) => {
         </div>
       </div>
 
-      <div className={`${style.smMenuContainer} ${openMenu ? style.isActive : ""  }`}>
+      <div
+        className={`${style.smMenuContainer} ${openMenu ? style.isActive : ""}`}
+      >
         <div>
           {MENU_ITEMS.map((item, index) => {
             return (
@@ -61,9 +86,11 @@ const Layout = ({ children }) => {
                 style={{ color: `white`, textTransform: "uppercase" }}
                 key={index}
               >
-                {item}
+                <Link to={`/${item.link}`} key={index}>
+                  {item.name}
+                </Link>
               </h3>
-            )
+            );
           })}
         </div>
         <div>
@@ -88,10 +115,8 @@ const Layout = ({ children }) => {
         />
       </div>
 
-      <div
-        className={style.mainDiv}
-      >
-        <main style={{display: "flex", flex:1}}>{children}</main>
+      <div className={style.mainDiv}>
+        <main style={{ display: "flex", flex: 1 }}>{children}</main>
       </div>
 
       <div style={{ flex: 1 }}>
@@ -111,11 +136,11 @@ const Layout = ({ children }) => {
         <Navbuttons></Navbuttons>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
