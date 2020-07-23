@@ -43,7 +43,7 @@ const IndexPage = () => {
           <h1 className={style.titleOutline}>Software</h1>
           <h1 className={style.titleOutline}>Developer</h1>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <h3 style={{ textAlign: "left", margin: "0px 0px 0px 20px" }}>
+            {/* <h3 style={{ textAlign: "left", margin: "0px 0px 0px 20px" }}>
               <ReactTypingEffect
                 style={{
                   letterSpacing: "5px",
@@ -75,7 +75,7 @@ const IndexPage = () => {
                 typingDelay={1100}
                 eraseDelay={2000}
               />
-            </h3>
+            </h3> */}
           </div>
 
           {/*  ^^^^^^^ Change till here ^^^^^^^ */}
