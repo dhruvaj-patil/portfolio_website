@@ -1,0 +1,132 @@
+@import "../../../utils/constants";
+
+.resume-container {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  
+
+  .resume-section-one {
+    flex: 4 1 0%;
+    display: flex;
+    flex-direction: row;
+
+    .img-container {
+      flex: 2 1 0%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      .img {
+        width: 50%;
+      }
+
+      .img::before {
+        content: "{";
+        color: #f5ba57;
+        font-size: 10rem;
+        position: absolute;
+        top: 0%;
+        z-index: 1;
+        font-family: monospace;
+        left: 22vw;
+      }
+    }
+  }
+
+  .resume-section-two {
+    flex: 1 1 0%;
+    display: flex;
+    justify-content: center;
+
+    margin: 1rem 0rem;
+
+    button {
+      padding: 20px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      border: 0px;
+      background-color: #f5ba57;
+      box-shadow: 0px 0px 40px -15px rgba(255, 102, 0, 0.79),
+        0 6px 20px 0 rgba(0, 0, 0, 0.69);
+    }
+  }
+
+  .resume-section-three {
+    flex: 5 1 0%;
+    display: flex;
+    flex-direction: row;
+
+    h3 {
+      //   text-align: center;
+      width: 100%;
+      text-transform: uppercase;
+    }
+
+    .info-section {
+      flex: 1 1 0%;
+      margin-left: 3rem;
+
+      .details-container {
+        display: flex;
+        flex-direction: column;
+        .details {
+          height: 70px;
+          h5 {
+            line-height: 0rem;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .resume-section-three::after {
+    content: "}";
+    color: #f5ba57;
+    font-size: 10rem;
+    position: absolute;
+    bottom: 0%;
+    z-index: 1;
+    font-family: monospace;
+    right: 20vw;
+  }
+}
+
+@media (max-width: $sm-screen) {
+  .resume-container {
+    margin: 60px 0rem;
+    .resume-section-one {
+      flex-direction: column;
+
+      .img {
+        width: 50%;
+        margin: 3rem;
+      }
+
+      .img::before {
+        top: 115px !important;
+        left: 15vw !important;
+      }
+    }
+
+    .resume-section-two {
+      margin: 40px 0px;
+    }
+
+    .resume-section-three {
+      flex-direction: column;
+    }
+    .resume-section-three::after {
+    position: relative;
+    bottom:  0;
+    right: 0;
+    text-align: end;
+    }
+
+  }
+}

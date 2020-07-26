@@ -8,15 +8,15 @@ export default function Footer() {
   return (
     <footer>
       <div className={style.iconDiv}>
-        <Link>
+        <Link to="/">
           <span className={`${style.icon} ${style.iconInsta}`}></span>
         </Link>{" "}
         <br></br>
-        <Link>
+        <Link to="/">
           <span className={`${style.icon} ${style.iconLinkedIn}`} />
         </Link>{" "}
         <br></br>
-        <Link>
+        <Link to="/">
           <span className={`${style.icon} ${style.iconGithub}`} />
         </Link>{" "}
         <br></br>
@@ -24,7 +24,7 @@ export default function Footer() {
 
       <div style={{ flex: 1 }} className={style.phDiv}>
         <h3>
-          <Link>dhruvaj.patil@gmail.com</Link>
+          <Link to="/">dhruvaj.patil@gmail.com</Link>
         </h3>
       </div>
 

@@ -7,7 +7,6 @@ import Img from "gatsby-image";
 
 import SEO from "../components/seo";
 import style from "../components/pages/index/index.layout.module.scss";
-// import ReactTypingEffect from "react-typing-effect";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -42,9 +41,6 @@ const IndexPage = () => {
         <div className={` ${style.titleDiv} ${style.outlineContainer}`}>
           <h1 className={style.titleOutline}>Software</h1>
           <h1 className={style.titleOutline}>Developer</h1>
-          {/* <div style={{ display: "flex", justifyContent: "space-between" }}>
-        
-          </div> */}
 
           {/*  ^^^^^^^ Change till here ^^^^^^^ */}
         </div>

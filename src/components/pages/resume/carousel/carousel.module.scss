@@ -1,0 +1,16 @@
+@import "../../../../utils/constants";
+
+.carousel-container {
+    width: 100%;
+    max-width: 40vw;
+    flex: 1;
+}
+
+
+
+@media (max-width: $sm-screen) {
+    .carousel-container {
+    max-width: 65vw;
+    }
+
+}
