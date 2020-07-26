@@ -133,7 +133,7 @@ const Layout = ({ children }) => {
           margin: `0`,
         }}
       >
-        <Navbuttons></Navbuttons>
+        {/* <Navbuttons></Navbuttons> */}
       </div>
     </div>
   );
