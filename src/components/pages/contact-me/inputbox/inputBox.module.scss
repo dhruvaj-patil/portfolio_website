@@ -1,0 +1,35 @@
+@import "../../../../utils/constants";
+
+label {
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  &.animated {
+    color: #f5ba57;
+    transform: translate3d(30px, -30px, 10px);
+    transition: transform 0.4s ease;
+  }
+
+  &.animation-cancel {
+    color: #58697d;
+    transform: translate3d(8vw, 14px, 10px);
+    transition: transform 0.4s ease;
+  }
+}
+
+input {
+  &[type="text"] {
+    background-color: #b8b8b8;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    border: 2px solid $yellow-color;
+    border-radius: 20px;
+  }
+}
