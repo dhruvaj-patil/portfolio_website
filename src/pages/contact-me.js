@@ -21,10 +21,6 @@ export default function ContactMePage() {
           <div className={style.sectionOne}>
           <div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
               Have an Idea ? Want to get in Touch ? Need Help with a project ? Feel free to drop a message.
             </p>
             </div>
