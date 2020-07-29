@@ -3,6 +3,7 @@ import Layout from "../components/layout/layout";
 import SpecializationCarousel from "../components/pages/resume/carousel/carousel";
 import ResumeImg from "../components/pages/resume/resume_img/resumeImg";
 import style from "../components/pages/resume/resume.module.scss";
+import dhruvajResume from "../images/static_files/Dhruvaj_resume.pdf";
 
 const EDUCATION = [
   {
@@ -19,7 +20,7 @@ const EDUCATION = [
 
 const EXPERIENCE = [
   {
-    position: "Trainee Intern",
+    position: "Trainee Associate",
     company: "Western Union",
     year: "Jan ‘20 - ‘Current",
   },
@@ -33,6 +34,11 @@ const EXPERIENCE = [
     company: "Stackwise",
     year: "Jan ‘19 - Nov ‘20",
   },
+  {
+    position: "Intern",
+    company: "Fizzible & Phynart",
+    year: "Dec ‘14 - Mar '15",
+  }
 ];
 
 const LANGUAGES = ["ENGLISH", "HINDI", "MARATHI"];
@@ -57,7 +63,7 @@ export default function resume() {
           </div>
         </div>
         <div className={style.resumeSectionTwo}>
-          <button>Download Resume</button>
+          <button> <a href={dhruvajResume} download="Dhruvaj Resume">Download Resume</a></button>
         </div>
         <div className={style.resumeSectionThree}>
           <div className={style.infoSection}>
