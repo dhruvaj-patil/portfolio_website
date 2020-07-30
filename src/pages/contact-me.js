@@ -1,8 +1,6 @@
 import React from "react";
 import Layout from "../components/layout/layout";
 import style from "../components/pages/contact-me/contact.module.scss";
-import InputBox from "../components/pages/contact-me/inputbox/inputBox";
-import TextareaBox from "../components/pages/contact-me/textarea/textareaBox";
 import NetlifyForm from "../components/pages/contact-me/netlify-form/netlifyForm";
 
 const HANDSHAKEIMG = require("../images/static_files/contact_us_photos/handshake.svg");
