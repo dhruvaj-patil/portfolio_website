@@ -3,13 +3,11 @@ import Layout from "../components/layout/layout";
 import style from "../components/pages/contact-me/contact.module.scss";
 import InputBox from "../components/pages/contact-me/inputbox/inputBox";
 import TextareaBox from "../components/pages/contact-me/textarea/textareaBox";
+import NetlifyForm from "../components/pages/contact-me/netlify-form/netlifyForm";
 
-const HANDSHAKEIMG = require("../images/static_files/contact_us_photos/handshake.svg")
+const HANDSHAKEIMG = require("../images/static_files/contact_us_photos/handshake.svg");
 
 export default function ContactMePage() {
-
-
-
   return (
     <Layout>
       <div className={style.aboutMeContainer}>
@@ -19,13 +17,14 @@ export default function ContactMePage() {
 
         <div className={style.divContainer}>
           <div className={style.sectionOne}>
-          <div>
-            <p>
-              Have an Idea ? Want to get in Touch ? Need Help with a project ? Feel free to drop a message.
-            </p>
+            <div>
+              <p>
+                Have an Idea ? Want to get in Touch ? Need Help with a project ?
+                Feel free to drop a message.
+              </p>
             </div>
             <div>
-                <img src={HANDSHAKEIMG}></img>
+              <img src={HANDSHAKEIMG}></img>
             </div>
           </div>
           <div className={style.sectionTwo}>
@@ -36,12 +35,24 @@ export default function ContactMePage() {
             <input type="text" placeholder="Name"></input>
 
             <input type="text" placeholder="Name"></input> */}
-            <InputBox labelValue="Name"></InputBox>
-            <InputBox labelValue="Contact No"></InputBox>
-            <InputBox labelValue="Email Address"></InputBox>
-            <TextareaBox labelValue="Message"></TextareaBox>
-
-            <button className={style.learnMore}>Submit</button>
+            <div
+              style={{
+                flex: 1,
+                display: "flex",
+              }}
+            >
+              <NetlifyForm></NetlifyForm>
+            </div>
+            <div
+              style={{
+                flex: 1,
+                display: "flex",
+                flexDirection: " column",
+                justifyContent: "center",
+              }}
+            >
+              <button className={style.learnMore}>Submit</button>
+            </div>
           </div>
         </div>
       </div>
