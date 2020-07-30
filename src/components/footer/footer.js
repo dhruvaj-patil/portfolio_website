@@ -8,23 +8,23 @@ export default function Footer() {
   return (
     <footer>
       <div className={style.iconDiv}>
-        <Link to="/">
+        <a href="https://www.instagram.com/dhruvaj/" target="_blank">
           <span className={`${style.icon} ${style.iconInsta}`}></span>
-        </Link>{" "}
+        </a>{" "}
         <br></br>
-        <Link to="/">
+        <a href="https://www.linkedin.com/in/dhruvaj/" target="_blank">
           <span className={`${style.icon} ${style.iconLinkedIn}`} />
-        </Link>{" "}
+        </a>{" "}
         <br></br>
-        <Link to="/">
+        <a href="https://github.com/dhruvaj-patil" target="_blank">
           <span className={`${style.icon} ${style.iconGithub}`} />
-        </Link>{" "}
+        </a>{" "}
         <br></br>
       </div>
 
       <div style={{ flex: 1 }} className={style.phDiv}>
         <h3>
-          <Link to="/">dhruvaj.patil@gmail.com</Link>
+          <a href="mailto:dev@dhruvaj.com" >dev@dhruvaj.com</a>
         </h3>
       </div>
 

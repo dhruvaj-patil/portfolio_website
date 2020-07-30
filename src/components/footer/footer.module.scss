@@ -10,6 +10,7 @@ footer {
 
 .ph-div {
   a {
+    cursor: pointer;
     writing-mode: vertical-rl;
     color: $gray-color;
   }
@@ -28,6 +29,7 @@ footer {
 
 .icon {
   display: inline-block;
+  cursor: pointer;
   width: 28px;
   height: 28px;
   background-size: cover;
