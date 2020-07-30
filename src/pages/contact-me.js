@@ -3,6 +3,7 @@ import Layout from "../components/layout/layout";
 import style from "../components/pages/contact-me/contact.module.scss";
 import InputBox from "../components/pages/contact-me/inputbox/inputBox";
 import TextareaBox from "../components/pages/contact-me/textarea/textareaBox";
+import NetlifyForm from "../components/pages/contact-me/netlify-form/netlifyForm";
 
 const HANDSHAKEIMG = require("../images/static_files/contact_us_photos/handshake.svg");
 
@@ -32,24 +33,7 @@ export default function ContactMePage() {
 
             <input type="text" placeholder="Name"></input>
             <input type="text" placeholder="Name"></input> */}
-            <form
-              method="post"
-              netlify-honeypot="bot-field"
-              data-netlify="true"
-              name="contact"
-            >
-              {/* <InputBox labelValue="Name"></InputBox>
-              <InputBox labelValue="Contact No"></InputBox>
-              <InputBox labelValue="Email Address"></InputBox>
-              <TextareaBox labelValue="Message"></TextareaBox> */}
-              <input type="hidden" name="bot-field" ></input>
-
-              <input type="text" name="name" placeholder="Name"></input>
-
-              <input type="text" name="email" placeholder="emaiil"></input>
-
-              <button className={style.learnMore}>Submit</button>
-            </form>
+            <NetlifyForm></NetlifyForm>
           </div>
         </div>
       </div>

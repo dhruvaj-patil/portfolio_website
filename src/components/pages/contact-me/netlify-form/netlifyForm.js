@@ -20,6 +20,8 @@ export default function NetlifyForm() {
           width: "100%",
           display: "flex",
           flexDirection: "column",
+          flex: 1,
+          justifyContent: "space-evenly",
         }}
       >
         <input type="hidden" name="bot-field" />
@@ -66,7 +68,20 @@ export default function NetlifyForm() {
         </div>
 
         <div className={style.inputDiv}>
-        <TextareaBox></TextareaBox>
+          <label
+            className={`${active ? style.animated : style.animationCancel}`}
+          >
+            MESSAGE
+          </label>
+          <textarea
+            name="Msg"
+            onFocus={() => setActive({ msg: true })}
+            onBlur={() => setActive({ msg: false })}
+          ></textarea>
+        </div>
+
+        <div className={style.inputDiv}>
+          <button className={style.learnMore}>Submit</button>
         </div>
       </form>
     </>
