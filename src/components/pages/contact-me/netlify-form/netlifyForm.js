@@ -64,6 +64,10 @@ export default function NetlifyForm() {
             onBlur={() => setActive({ email: false })}
           />
         </div>
+
+        <div className={style.inputDiv}>
+        <TextareaBox></TextareaBox>
+        </div>
       </form>
     </>
   );
