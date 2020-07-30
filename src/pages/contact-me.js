@@ -29,7 +29,6 @@ export default function ContactMePage() {
           <div className={style.sectionTwo}>
             {/* <input type="text" placeholder="Name"></input>
 
-            <input type="text" placeholder="Name"></input>
 
             <input type="text" placeholder="Name"></input>
             <input type="text" placeholder="Name"></input> */}
@@ -39,10 +38,11 @@ export default function ContactMePage() {
               data-netlify="true"
               name="contact"
             >
-              <InputBox labelValue="Name"></InputBox>
+              {/* <InputBox labelValue="Name"></InputBox>
               <InputBox labelValue="Contact No"></InputBox>
               <InputBox labelValue="Email Address"></InputBox>
-              <TextareaBox labelValue="Message"></TextareaBox>
+              <TextareaBox labelValue="Message"></TextareaBox> */}
+              <input type="text" name="name" placeholder="Name"></input>
 
               <button className={style.learnMore}>Submit</button>
             </form>
