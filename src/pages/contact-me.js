@@ -42,7 +42,11 @@ export default function ContactMePage() {
               <InputBox labelValue="Contact No"></InputBox>
               <InputBox labelValue="Email Address"></InputBox>
               <TextareaBox labelValue="Message"></TextareaBox> */}
+              <input type="hidden" name="bot-field" ></input>
+
               <input type="text" name="name" placeholder="Name"></input>
+
+              <input type="text" name="email" placeholder="emaiil"></input>
 
               <button className={style.learnMore}>Submit</button>
             </form>
