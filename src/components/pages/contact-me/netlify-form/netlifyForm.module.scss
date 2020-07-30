@@ -7,9 +7,11 @@ $yellow-border: #6e5325;
   display: flex;
   /* margin-top: 25px; */
   flex: 1;
+  margin: 15px 0px;
 
   button {
     position: relative;
+    width: 100%;
     display: inline-block;
     cursor: pointer;
     outline: none;
