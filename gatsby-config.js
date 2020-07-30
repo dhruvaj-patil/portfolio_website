@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Dhruvaj Patil`,
-    description: `Dhruvaj Patil Portfolio Website`,
+    description: `Dhruvaj's Resume / Portfolio as a Software and Web Developer`,
+    siteUrl: `https://www.dhruvaj.com`,
     author: `Dhruvaj Patil`,
   },
   plugins: [
@@ -20,12 +21,12 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Dhruvaj Patil`,
-        short_name: `Portfolio website`,
+        short_name: `Dhruvaj Patil's Website`,
         start_url: `/`,
         background_color: `#B8B8B8`,
         theme_color: `#151C24`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,
