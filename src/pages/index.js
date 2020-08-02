@@ -12,7 +12,7 @@ const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(
-        relativePath: { eq: "static_files/Hero_img1.png" }
+        relativePath: { eq: "static_files/Hero_img_clean.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 300) {
