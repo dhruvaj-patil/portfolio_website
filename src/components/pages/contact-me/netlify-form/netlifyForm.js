@@ -60,6 +60,7 @@ export default function NetlifyForm({success = false, setSuccess}) {
             type="text"
             onFocus={() => setActive({ name: true })}
             onBlur={() => setActive({ name: false })}
+            required="required"
           />
         </div>
         <div className={style.inputDiv}>
@@ -73,6 +74,8 @@ export default function NetlifyForm({success = false, setSuccess}) {
             type="text"
             onFocus={() => setActive({ contact: true })}
             onBlur={() => setActive({ contact: false })}
+            pattern="^\d{10}$"
+           required="required"
           />
         </div>
         <div className={style.inputDiv}>
@@ -84,8 +87,10 @@ export default function NetlifyForm({success = false, setSuccess}) {
           <input
             type="text"
             name="EMAIL ADDRESS"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             onFocus={() => setActive({ email: true })}
             onBlur={() => setActive({ email: false })}
+            required="required"
           />
         </div>
 
@@ -99,6 +104,7 @@ export default function NetlifyForm({success = false, setSuccess}) {
             name="Msg"
             onFocus={() => setActive({ msg: true })}
             onBlur={() => setActive({ msg: false })}
+            required="required"
           ></textarea>
         </div>
 
