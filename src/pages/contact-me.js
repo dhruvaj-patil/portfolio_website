@@ -2,10 +2,20 @@ import React from "react";
 import Layout from "../components/layout/layout";
 import style from "../components/pages/contact-me/contact.module.scss";
 import NetlifyForm from "../components/pages/contact-me/netlify-form/netlifyForm";
+import { BooleanParam, useQueryParam } from 'use-query-params';
 
 const HANDSHAKEIMG = require("../images/static_files/contact_us_photos/handshake.svg");
 
 export default function ContactMePage() {
+
+
+
+
+  const [successMsg, setSuccessMsg] = useQueryParam("success", BooleanParam);
+  
+
+
+
   return (
     <Layout>
       <div className={style.aboutMeContainer}>
@@ -31,7 +41,7 @@ export default function ContactMePage() {
 
             <input type="text" placeholder="Name"></input>
             <input type="text" placeholder="Name"></input> */}
-            <NetlifyForm></NetlifyForm>
+            <NetlifyForm success={successMsg} setSuccess={setSuccessMsg}></NetlifyForm>
           </div>
         </div>
       </div>

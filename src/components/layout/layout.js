@@ -23,7 +23,7 @@ const MENU_ITEMS = [
     link: "about-me",
   },
   {
-    name: "resume",
+    name: "Profile",
     link: "resume",
   },
   {

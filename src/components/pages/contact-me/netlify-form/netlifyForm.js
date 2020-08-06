@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import style from "./netlifyForm.module.scss";
 
-export default function NetlifyForm() {
+
+const CANCEL = require("../../../../images/static_files/contact_us_photos/cancel.svg");
+
+
+export default function NetlifyForm({success = false, setSuccess}) {
   const [active, setActive] = useState({
     name: false,
     contact: false,
@@ -11,7 +15,26 @@ export default function NetlifyForm() {
 
   return (
     <>
+      <div className={`${style.submitBg} ${success ? style.active : ""}`}>
+      </div>
+        <div className={`${style.submitContainer} ${success ? style.active : ""}`}>
+        <div className={style.cancelContainer}>
+          <img onClick={() => setSuccess(0)} src={CANCEL}></img>
+        </div>
+        <div style={{flex: 1}}>
+          <p>
+            Thank you for Connecting. I'll get back to you.
+            <span role="img" aria-label="i">
+              🤝
+            </span>
+          </p>
+          </div>
+          <div style={{flex: 1}}>
+          <button  onClick={() => setSuccess(0)} >Welcome</button>
+          </div>
+        </div>
       <form
+        action="/contact-me?success=1"
         method="post"
         netlify-honeypot="bot-field"
         data-netlify="true"
@@ -34,7 +57,6 @@ export default function NetlifyForm() {
           <input
             type="hidden"
             name="NAME"
-            placeholder="name"
             type="text"
             onFocus={() => setActive({ name: true })}
             onBlur={() => setActive({ name: false })}

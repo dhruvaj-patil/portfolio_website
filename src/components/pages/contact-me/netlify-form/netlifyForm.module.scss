@@ -115,3 +115,90 @@ input {
     border-radius: 20px;
   }
 }
+
+.submitContainer {
+  background-color: #151c24;
+  width: 50vw;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  right: 0;
+  -webkit-box-shadow: 0px 0px 30px 10px rgba(245, 186, 87, 1);
+  -moz-box-shadow: 0px 0px 30px 10px rgba(245, 186, 87, 1);
+  box-shadow: 0px 0px 30px 10px rgba(245, 186, 87, 1);
+  flex-direction: column;
+
+  display: none;
+
+  .cancelContainer {
+    flex: 1 1 0%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 20px 0px 0px;
+  }
+
+  p {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+
+  button {
+    padding: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #f5ba57;
+    box-shadow: 0px 0px 40px -15px rgba(255, 102, 0, 0.79),
+      0 6px 20px 0 rgba(0, 0, 0, 0.69);
+  }
+}
+
+.submitBg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: black;
+  z-index: 1;
+  opacity: 0.7;
+  display: none;
+}
+
+.active {
+  display: flex;
+}
+
+@media (max-width: $sm-screen) {
+  .submitContainer {
+    padding: 30px;
+    height: fit-content;
+    width: 80vw;
+    position: fixed;
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    .cancelContainer {
+      padding: unset;
+      height: 60px;
+    }
+  }
+
+  .submitBg {
+    position: fixed;
+  }
+}
