@@ -37,6 +37,7 @@ export default function NetlifyForm({success = false, setSuccess}) {
         action="/contact-me?success=1"
         method="post"
         netlify-honeypot="bot-field"
+        enctype="application/x-www-form-urlencoded" 
         data-netlify="true"
         name="contact"
         style={{
@@ -60,7 +61,7 @@ export default function NetlifyForm({success = false, setSuccess}) {
             type="text"
             onFocus={() => setActive({ name: true })}
             onBlur={() => setActive({ name: false })}
-            required="required"
+            required
           />
         </div>
         <div className={style.inputDiv}>
@@ -75,7 +76,7 @@ export default function NetlifyForm({success = false, setSuccess}) {
             onFocus={() => setActive({ contact: true })}
             onBlur={() => setActive({ contact: false })}
             pattern="^\d{10}$"
-           required="required"
+           required
           />
         </div>
         <div className={style.inputDiv}>
@@ -90,7 +91,7 @@ export default function NetlifyForm({success = false, setSuccess}) {
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             onFocus={() => setActive({ email: true })}
             onBlur={() => setActive({ email: false })}
-            required="required"
+            required
           />
         </div>
 
@@ -104,7 +105,7 @@ export default function NetlifyForm({success = false, setSuccess}) {
             name="message"
             onFocus={() => setActive({ msg: true })}
             onBlur={() => setActive({ msg: false })}
-            required="required"
+            required
           ></textarea>
         </div>
 
