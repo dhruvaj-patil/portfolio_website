@@ -31,29 +31,23 @@ const Navbar = ({ siteTitle, navItems }) => (
       </div>
 
       <div style={{ flex: 2 }}>
-        <h1 style={{ margin: 0 }}>
+        <h2 style={{ margin: 0 }}>
           <Link
             to="/"
             style={{
               color: `white`,
               textDecoration: `none`,
               textShadow: `none`,
-
               letterSpacing: `1.5px`,
             }}
           >
             {siteTitle}
           </Link>
-        </h1>
-
-        <h2
-          style={{
-            color: `#8d8d8d`,
-            letterSpacing: `5px`,
-          }}
-        >
-          GET SH<span role="img" aria-label="i">🤙</span>T DONE
         </h2>
+
+        <h3 className={style.descMoto}>
+          Meráki
+        </h3>
       </div>
     </div>
   </header>
