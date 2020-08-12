@@ -98,12 +98,7 @@ const Layout = ({ children }) => {
             Dhruvaj Patil
           </h1>
           <h2 style={{ color: `#8d8d8d`, textTransform: "uppercase" }}>
-            {" "}
-            GET SH
-            <span role="img" aria-label="i">
-              🤙
-            </span>
-            T DONE
+          Meráki
           </h2>
         </div>
       </div>
