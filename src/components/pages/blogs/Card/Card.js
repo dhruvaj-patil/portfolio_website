@@ -3,9 +3,7 @@ import Img from "gatsby-image";
 import style from "./card.module.scss";
 
 export default function Card({ title, bgImg, tag, content }) {
-  console.log("Image ===>", bgImg.childImageSharp.fixed);
-  console.log("title ===>", title);
-  console.log("tag ===>", tag);
+
 
   const [overlaystate, setoverlaystate] = useState(false);
 
@@ -24,6 +22,7 @@ export default function Card({ title, bgImg, tag, content }) {
           }}
           width={250}
           height={350}
+          // TODO: Add Alt Tag
           fixed={bgImg.childImageSharp.fixed}
         />
 
@@ -39,7 +38,7 @@ export default function Card({ title, bgImg, tag, content }) {
             <p>{content.substring(0, 350)} ...</p>
           </div>
           <div className={style.sectionTwo}>
-          <button className={`${style.customBtn} ${style.btn14}`}>Read More</button>
+          <button className={`${style.customBtn} ${style.btn14}`}>Read Full Article</button>
           </div>
         </div>
       </div>

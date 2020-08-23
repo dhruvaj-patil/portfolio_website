@@ -2,30 +2,30 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout/layout";
 import Card from "../components/pages/blogs/Card/Card";
+import style from "../components/pages/blogs/blog-page.module.scss";
 
 export default function blogs({ data }) {
   console.log(data.allStrapiBlog.edges);
   return (
     <Layout>
-      <div>
-        <h1>Blogs</h1>
-        <div style={{display: 'flex'}}>
-        {data.allStrapiBlog.edges.map((document, index) => {
-          return (
-            <div>
-            <Card
-              key={index}
-              title={document.node.blog_title}
-              bgImg={document.node.ImageBg}
-              tag={document.node.tag}
-              content={document.node.content}
-            ></Card>
+      <div className={style.blogPageContainer}>
+        <div className={style.headingDiv}>
+          <h1>Blogs</h1>
+        </div>
+        <div className={style.blogPostContainer}>
+          {data.allStrapiBlog.edges.map((document, index) => {
+            return (
+              <div key={document.node.id}>
+                <Card
+                  key={index}
+                  title={document.node.blog_title}
+                  bgImg={document.node.ImageBg}
+                  tag={document.node.tag}
+                  content={document.node.content}
+                ></Card>
               </div>
-
-                      
-          
-          );
-        })}
+            );
+          })}
         </div>
       </div>
     </Layout>
@@ -34,7 +34,7 @@ export default function blogs({ data }) {
 
 export const pageQuery = graphql`
   query MyQuery {
-    allStrapiBlog {
+    allStrapiBlog(filter: {disabled: {eq: false}})  {
       edges {
         node {
           blog_title

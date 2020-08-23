@@ -1,7 +1,9 @@
+@import "../../../../utils/constants";
+
 .card {
   width: 350px;
   height: 530px;
-  background-color: #f5ba57;
+  background-color: $yellow-color;
   margin: 30px;
   display: flex;
   flex-direction: column;
@@ -20,12 +22,13 @@
   border-radius: 20px;
   position: absolute;
   top: 120px;
+  margin: 80px 0px;
 
 
   .section-one {
     height: 350px;
-    background-color: #151c24;
-    color: white;
+    background-color: $blue-black-color;
+    color: $white-color;
     border-radius: 20px;
     opacity: 0.8;
     padding: 20px;
@@ -35,7 +38,7 @@
 
   .section-two{
     height: 180px;
-    background-color: #f5ba57;
+    background-color: $yellow-color;
     border-radius: 0px 0px 20px 20px;
     display: flex;
     justify-content: center;
@@ -85,7 +88,7 @@
 
 /**** BTN No. 14 ****/
 .btn-14 {
-  border: 2px solid #000;
+  border: 2px solid $blue-black-color;
   z-index: 1;
 }
 .btn-14:after {
@@ -96,11 +99,11 @@
   top: 0;
   right: 0;
   z-index: -1;
-  background: #000;
+  background:$blue-black-color;
   transition: all 0.3s ease;
 }
 .btn-14:hover {
-  color: #fff;
+  color: $white-color;
 }
 .btn-14:hover:after {
   left: 0;
@@ -110,5 +113,18 @@
   top: 2px;
 }
 
+
+@media (max-width: $sm-screen) {
+  
+  .card {
+    margin:30px 0px;
+  }
+
+
+  // TODO: Wont work for more blog posts on small screens.
+  .card-overlay{
+  margin: 120px 0px;
+  }
+}
 
 

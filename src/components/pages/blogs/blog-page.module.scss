@@ -1,0 +1,28 @@
+@import "../../../utils/constants";
+
+.heading-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0px;
+}
+
+.blog-page-container {
+  width: 100%;
+}
+@media (max-width: $sm-screen) {
+  .blog-page-container {
+    width: 100vw;
+  }
+
+  .blog-container {
+    width: 100%;
+  }
+
+  .blog-post-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
