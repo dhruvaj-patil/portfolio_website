@@ -93,13 +93,16 @@ const Layout = ({ children }) => {
             );
           })}
         </div>
-        <div>
-          <h1 style={{ color: `white`, textTransform: "uppercase" }}>
-            Dhruvaj Patil
+        <div className={style.titleContainer}>
+          <h1>
+            <Link to="/">Dhruvaj Patil</Link>
           </h1>
-          <h2 style={{ color: `#8d8d8d`, textTransform: "uppercase" }}>
-          Meráki
-          </h2>
+          <p className={style.tooltip}>
+            Meráki
+            <span className={style.tooltiptext}>
+              Putting your Heart & Soul into your work.
+            </span>
+          </p>
         </div>
       </div>
 

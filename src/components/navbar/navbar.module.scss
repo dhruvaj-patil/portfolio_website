@@ -1,3 +1,5 @@
+@import "../../utils/constants";
+
 header {
   background: #151c24;
   height: 100vh;
@@ -26,4 +28,45 @@ h2 {
   &:hover {
     color: #f5ba57 !important;
   }
+
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted $yellow-color;
+  color: #8d8d8d;
+  text-transform: "uppercase";
+  font-size: x-large;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: $yellow-color;
+  color: $blue-black-color;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+  font-size: medium;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: $yellow-color transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

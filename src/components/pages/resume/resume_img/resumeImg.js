@@ -16,9 +16,9 @@ import Img from "gatsby-image"
 export default function ResumeImg() {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "static_files/resume.jpeg" }) {
+      placeholderImage: file(relativePath: { eq: "static_files/specialization_photo.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 100) {
+          fluid(maxWidth: 100,quality: 100 ) {
             ...GatsbyImageSharpFluid
           }
         }

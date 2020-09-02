@@ -1,0 +1,286 @@
+// section {
+//     width: 540px;
+//     margin-top: 90px;
+//     margin-left: auto;
+//     margin-right: auto;
+//   }
+  
+//   div {
+//     width: 250px;
+//     max-height: 250px;
+//     display: inline-block;
+//   }
+  
+  
+//   /*colors*/
+  
+//   .d {
+//     stroke-width: 3px;
+//     stroke-linecap: round;
+//     fill: none;
+//   }
+  
+//   .d,
+//   pattern {
+//     stroke: Black;
+//     stroke-miterlimit: 10;
+//   }
+  
+//   .orangered {
+//     fill: #f16322;
+//   }
+  
+//   .orange {
+//     fill: #ff9500;
+//   }
+  
+//   .purple {
+//     fill: #825bf6;
+//   }
+  
+//   .pattern {
+//     fill: url(#a);
+//   }
+  
+//   .white {
+//     fill: white;
+//   }
+  
+//   path.draw {
+//     stroke-dasharray: 1000;
+//     stroke-dashoffset: 1000;
+//     animation: dash 5s linear alternate infinite;
+//   }
+  
+//   @keyframes dash {
+//     from {
+//       stroke-dashoffset: 1000;
+//     }
+//     to {
+//       stroke-dashoffset: 0;
+//     }
+//   }
+  
+//   .eye {
+//     animation: eye 3s ease-in-out infinite;
+//     transform-origin: center;
+//   }
+  
+//   circle.eye {
+//     animation: pupil 3s ease-in-out infinite
+//   }
+  
+//   @keyframes eye {
+//     5%,
+//     20% {
+//       transform: scale(1, 1);
+//       stroke-width: 2px;
+//     }
+//     10%,
+//     15% {
+//       transform: scale(1, 0);
+//       stroke-width: 20px;
+//     }
+//   }
+  
+//   @keyframes pupil {
+//     100%,
+//     30% {
+//       transform: scale(1, 1);
+//     }
+//     2%,
+//     20% {
+//       transform: scale(1.2, 1.2);
+//     }
+//     9%,
+//     16% {
+//       transform: scale(0, 0);
+//     }
+//     75%,
+//     50%,
+//     35% {
+//       transform: translate(20px, -4px);
+//     }
+//     55%,
+//     65% {
+//       transform: translate(-20px, 5px);
+//     }
+//   }
+  
+//   @keyframes blink {
+//     0%,
+//     10% {
+//       opacity: 0
+//     }
+//     25%,
+//     85% {
+//       opacity: 1
+//     }
+//     100% {
+//       opacity: 0
+//     }
+//   }
+  
+//   .white {
+//     animation: blink 2.2s ease infinite;
+//   }
+  
+//   .d2 {
+//     animation-delay: .2s
+//   }
+  
+//   .d3 {
+//     animation-delay: .3s
+//   }
+  
+//   .d4 {
+//     animation-delay: .5s
+//   }
+  
+//   .braind {
+//     stroke: Black;
+//     stroke-miterlimit: 25;
+//     fill: none;
+//   }
+  
+//   .d.brain {
+//     fill: none;
+//   }
+  
+//   @keyframes braindrink {
+//     0% {
+//       transform: scale(1, 1);
+//     }
+//     50% {
+//       transform: scale(1.1, 1.2);
+//       transform: rotate(45deg);
+//       transform: translate(4px, 12px);
+//       transform: skew(0, -12deg);
+//     }
+//     100% {
+//       transform: scale(1, 1)
+//     }
+//   }
+  
+//   .brain {
+//     animation: braindrink 2.15s ease-in-out infinite;
+//     transform-origin: center top;
+//   }
+  
+//   .ink {
+//     animation: ink 6s ease-in-out infinite;
+//     transform-origin: center;
+//   }
+  
+//   @keyframes ink {
+//     0% {
+//       fill: white
+//     }
+//     50% {
+//       fill: black
+//     }
+//     100% {
+//       fill: orange
+//     }
+//   }
+  
+//   @keyframes straw {
+//     0% {
+//       transform: scale(2, 2);
+//       transform: skew(0, -10deg);
+//     }
+//     50% {
+//       transform: scale(1, 1);
+//     }
+//     100% {
+//       transform: scale(2, 2);
+//       transform: skew(0, -10deg);
+//     }
+//   }
+  
+//   .pen {
+//     transform-origin: center top;
+//     animation-delay: .1s
+//   }
+  
+//   .juice {
+//     // webkit-animation-duration: 2.15s;
+//     animation: juice 6s ease-in-out infinite;
+//   }
+  
+//   .patch {
+//     transform: scale(0.5, 0.5);
+//     animation-duration: 2s;
+//     transform-origin: right
+//   }
+  
+//   .lash {
+//     // webkit-animation-duration: 0.5s;
+//     // webkit-animation-delay: 1.5s infinite;
+//     animation-timing-function: ease;
+//     transform-origin: center bottom
+//   }
+  
+//   .straw {
+//     // -webkit-animation-duration: 2.15s;
+//     animation: straw 2.15s ease-in-out infinite;
+//   }
+  
+//   .hand {
+//     -webkit-animation-duration: 12s;
+//     -webkit-transform-origin: right center;
+//     -ms-transform-origin: top center;
+//     transform-origin: top center;
+//     animation-duration: 12s;
+//     animation: illust ease-in-out 12s infinite;
+//   }
+  
+//   path.thic {
+//     stroke-width: 4px;
+//     stroke-linecap: round;
+//   }
+  
+//   @keyframes illust {
+//     20% {
+//       -webkit-transform: rotate3d(0, 0, 1, 15deg);
+//       transform: rotate3d(0, 0, 1, 15deg);
+//     }
+//     40% {
+//       -webkit-transform: rotate3d(0, 0, 1, -10deg);
+//       transform: rotate3d(0, 0, 1, -10deg);
+//     }
+//     60% {
+//       -webkit-transform: rotate3d(0, 0, 1, 5deg);
+//       transform: rotate3d(0, 0, 1, 5deg);
+//     }
+//     80% {
+//       -webkit-transform: rotate3d(0, 0, 1, -5deg);
+//       transform: rotate3d(0, 0, 1, -5deg);
+//     }
+//     5%,
+//     50%,
+//     100% {
+//       transform: translate(67px, -34px);
+//     }
+//     25%,
+//     65% {
+//       transform: translate(-20px, 25px);
+//     }
+//     0%,
+//     50%,
+//     35% {
+//       transform: rotate(20deg);
+//     }
+//     55%,
+//     75%,
+//     100% {
+//       transform: rotate(-40deg);
+//     }
+    
+//   }
+  
+//   .upper {
+//     position: relative;
+//     bottom: 250px;
+//     height: 250px;
+//   }

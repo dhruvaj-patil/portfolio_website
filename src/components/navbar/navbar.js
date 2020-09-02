@@ -45,9 +45,12 @@ const Navbar = ({ siteTitle, navItems }) => (
           </Link>
         </h2>
 
-        <h3 className={style.descMoto}>
+        <p className={`${style.descMoto} ${style.tooltip}`}>
           Meráki
-        </h3>
+          <span className={style.tooltiptext}>
+              Putting your Heart & Soul into your work.
+            </span>
+        </p>
       </div>
     </div>
   </header>

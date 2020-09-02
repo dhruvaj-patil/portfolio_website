@@ -5,7 +5,7 @@ import Card from "../components/pages/blogs/Card/Card";
 import style from "../components/pages/blogs/blog-page.module.scss";
 
 export default function blogs({ data }) {
-  console.log(data.allStrapiBlog.edges);
+  console.log(data);
   return (
     <Layout>
       <div className={style.blogPageContainer}>
@@ -26,6 +26,25 @@ export default function blogs({ data }) {
               </div>
             );
           })}
+          {/* TODO: temp photos of websites i have created
+          <div>
+            <Card
+              title="Sanfini - Single Page Company Website"
+              bgImg={document.node.ImageBg}
+              tag={document.node.tag}
+              content={document.node.content}
+            ></Card>
+          </div> */}
+
+          {/* <div>
+            <Card
+              key={index}
+              title={document.node.blog_title}
+              bgImg={document.node.ImageBg}
+              tag={document.node.tag}
+              content={document.node.content}
+            ></Card>
+          </div> */}
         </div>
       </div>
     </Layout>
@@ -34,7 +53,7 @@ export default function blogs({ data }) {
 
 export const pageQuery = graphql`
   query MyQuery {
-    allStrapiBlog(filter: {disabled: {eq: false}})  {
+    allStrapiBlog(filter: { disabled: { eq: false } }) {
       edges {
         node {
           blog_title
@@ -54,3 +73,8 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+// export const sanfiniProject = graphql`
+ 
+//   }
+// `;

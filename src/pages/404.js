@@ -3,12 +3,13 @@ import React from "react";
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
 import style from "../components/pages/404/404.module.scss";
+import AllIcons from "../components/layout/bg_icons/AllIcons";
 
 const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
 
-    <div style={{display:"flex", justifyContent: "center"}}>
+    {/* <div style={{display:"flex", justifyContent: "center"}}>
       <p style={{textAlign: "center"}}> This Page is Currently under COnstruction Please Visit Again Later</p>
     </div>
     <div style={{display: "flex"}}>
@@ -40,7 +41,12 @@ const NotFoundPage = () => (
           <div className={style.fire}></div>
         </div>
       </div>
-    </div>
+    </div> */}
+
+
+    {/* <div>
+      <AllIcons></AllIcons>
+    </div> */}
   </Layout>
 );
 
