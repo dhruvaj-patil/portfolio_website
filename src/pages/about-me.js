@@ -46,8 +46,7 @@ export default function AboutMePage() {
               foresight, passion, and creativity. Because of my inquisitive
               nature, I keep venturing out trying to do new things, and gain new
               perspectives around things. Apart from being a passionate Software
-              Developer, I love to spend my time traveling, cooking, learning
-              about space, and playing sports.
+              Developer, I love to spend my time traveling, cooking, learning about cosmos, and playing sports.
             </p>
           </div>
         </div>

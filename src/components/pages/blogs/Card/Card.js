@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Img from "gatsby-image";
 import style from "./card.module.scss";
 
-export default function Card({ title, bgImg, tag, content }) {
+export default function Card({ title, bgImg, tag, content, take_away }) {
 
 
   const [overlaystate, setoverlaystate] = useState(false);
 
+  console.log("take_away", take_away)
   return (
     <div
       className={`${style.card}`}
@@ -38,7 +39,7 @@ export default function Card({ title, bgImg, tag, content }) {
             <p>{content.substring(0, 350)} ...</p>
           </div>
           <div className={style.sectionTwo}>
-          <button className={`${style.customBtn} ${style.btn14}`}>Read Full Article</button>
+          <button className={`${style.customBtn} ${style.btn14}`}><a href={take_away} target="_blank">Read Full Article</a></button>
           </div>
         </div>
       </div>

@@ -10,6 +10,11 @@
 .blog-page-container {
   width: 100%;
 }
+
+.blog-post-container {
+  display: flex;
+  flex-direction: row;
+}
 @media (max-width: $sm-screen) {
   .blog-page-container {
     width: 100vw;

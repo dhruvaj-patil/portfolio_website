@@ -27,7 +27,7 @@ const MENU_ITEMS = [
     link: "resume",
   },
   {
-    name: "blogs",
+    name: "blogs / portfolio",
     link: "blogs",
   },
   {

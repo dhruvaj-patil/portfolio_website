@@ -10,7 +10,7 @@ export default function blogs({ data }) {
     <Layout>
       <div className={style.blogPageContainer}>
         <div className={style.headingDiv}>
-          <h1>Blogs</h1>
+          <h1>Portfolio / Blogs</h1>
         </div>
         <div className={style.blogPostContainer}>
           {data.allStrapiBlog.edges.map((document, index) => {
@@ -22,6 +22,7 @@ export default function blogs({ data }) {
                   bgImg={document.node.ImageBg}
                   tag={document.node.tag}
                   content={document.node.content}
+                  take_away={document.node.take_away}
                 ></Card>
               </div>
             );
@@ -61,6 +62,7 @@ export const pageQuery = graphql`
           id
           published_on(formatString: "DD-MMM-YYYY")
           tag
+          take_away
           ImageBg {
             childImageSharp {
               fixed(width: 450, height: 450, trim: 0) {
