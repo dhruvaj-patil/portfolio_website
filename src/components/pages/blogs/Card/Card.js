@@ -39,7 +39,7 @@ export default function Card({ title, bgImg, tag, content, take_away }) {
             <p>{content.substring(0, 350)} ...</p>
           </div>
           <div className={style.sectionTwo}>
-          <button className={`${style.customBtn} ${style.btn14}`}><a href={take_away} target="_blank">Read Full Article</a></button>
+          <button className={`${style.customBtn} ${style.btn14}`}><a href={take_away} target="_blank">Explore</a></button>
           </div>
         </div>
       </div>
